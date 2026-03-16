@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Add Student</title>
+</head>
+<body>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card p-4 shadow">
+
+            <h2 class="text-center text-white bg-danger p-2 rounded">Fill the Student details here</h2>
+
+            <form method="post" action="">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Name" required autocomplete="off">
+                </div>
+
+                <div class="mb-3">
+                    <input type="number" class="form-control" name="roll_no" placeholder="Roll Number" required autocomplete="off">
+                </div>
+
+                <div class="mb-3">
+                    <input type="email" class="form-control" name="email" placeholder="Email Address" required autocomplete="off">
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="course" placeholder="Course" required autocomplete="off">
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">Save Student</button>
+                </div>
+                <br>
+                <div class="text-center">
+                    <a href="/s/" class="btn btn-primary mb-3">Home</a>
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- <form method="POST">
+    {% csrf_token %}
+    
+    Name: <input type="text" name="name" required>
+    Roll No: <input type="number" name="roll_no" required>
+    Email:<input type="email" name="email" required>
+    Course:<input type="text" name="course" required>
+
+
+    <button type="submit">Save</button>
+</form> -->
+<!-- <div class="row">
+    <div class="col-md-9">
+        <div class="jumbotron">
+            <h1 class="text-center text-white btn-danger">Add Student</h1>
+            <div class="form-group">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="name" class="form-control" placeholder="Name" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="number" name="roll_no" class="form-control" placeholder="Roll Number" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="course" class="form-control" placeholder="Course" required autocomplete="off">
+                    </div>
+                    <button type="submit">Save</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+</body>
+</html>

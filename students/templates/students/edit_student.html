@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Edit Student</title>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h1 class="text-center text-white btn-danger">Edit Student details</h1>
+            <div class="form-group">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="name" class="form-control" value="{{ student.name }}" placeholder="Name" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="number" name="roll_no" class="form-control" value="{{ student.roll_no }}" placeholder="Roll Number" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="email" name="email" class="form-control" value="{{ student.email }}" placeholder="Email Address" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="course" class="form-control" value="{{ student.course }}" placeholder="Course" required autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <form method="POST">
+    {% csrf_token %}
+
+    Name:
+    <input type="text" name="name" value="{{ student.name }}"><br><br>
+
+    Roll No:
+    <input type="number" name="roll_no" value="{{ student.roll_no }}"><br><br>
+
+    Email:
+    <input type="email" name="email" value="{{ student.email }}"><br><br>
+
+    Course:
+    <input type="text" name="course" value="{{ student.course }}"><br><br>
+
+    <button type="submit">Update</button>
+</form> -->
+
+</body>
+</html>
